@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;distance unit="${1:km}"&gt;$2.${3:0}&lt;/distance&gt;</string>
+	<key>name</key>
+	<string>Distance</string>
+	<key>scope</key>
+	<string>text.xml</string>
+	<key>tabTrigger</key>
+	<string>ds</string>
+	<key>uuid</key>
+	<string>08345CAA-666F-47EB-8C04-BE04666F9107</string>
+</dict>
+</plist>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;lap number="$1"&gt;
+  &lt;time&gt;${2:00}:${3:00}:${4:00}.${5:0}&lt;/time&gt;
+  &lt;average_heart_rate&gt;${6}&lt;/average_heart_rate&gt;
+&lt;/lap&gt;$0</string>
+	<key>name</key>
+	<string>Normal Lap</string>
+	<key>scope</key>
+	<string>text.xml</string>
+	<key>tabTrigger</key>
+	<string>lap</string>
+	<key>uuid</key>
+	<string>7FE70E71-257B-4909-A8AA-C63818660344</string>
+</dict>
+</plist>

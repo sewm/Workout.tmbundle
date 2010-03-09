@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<workout>
+  <date>${TM_DATE}</date>
+  <time></time>
+  <training_effect></training_effect>
+  <average_heart_rate></average_heart_rate>
+  <peak_heart_rate></peak_heart_rate>
+  <energy></energy>
+  
+</workout>
