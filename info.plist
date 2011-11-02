@@ -4,6 +4,14 @@
 <dict>
 	<key>name</key>
 	<string>Workout</string>
+	<key>ordering</key>
+	<array>
+		<string>EC997395-8359-47BA-86FC-D17537549C12</string>
+		<string>EA5B807F-FC8D-4D08-A015-D74ABF9F9980</string>
+		<string>08345CAA-666F-47EB-8C04-BE04666F9107</string>
+		<string>7FE70E71-257B-4909-A8AA-C63818660344</string>
+		<string>D73A62C4-7874-4F09-8853-94DF8481BF6E</string>
+	</array>
 	<key>uuid</key>
 	<string>5EA55F2D-6820-4D47-BC48-CFF3E4C0A877</string>
 </dict>
