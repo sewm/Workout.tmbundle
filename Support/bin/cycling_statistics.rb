@@ -7,9 +7,9 @@ include REXML
 DIRECTORY = "/Users/sam/Documents/Fitness/Workouts"
 
 # Variables for distance, number of bike rides and hours ridden.
-total_distance, total_2009, total_2010, total_2011 = 0.00, 0.00, 0.00, 0.00
-total_rides, total_rides_2009, total_rides_2010, total_rides_2011 = 0, 0, 0, 0
-total_hours, total_hours_2009, total_hours_2010, total_hours_2011 = 0.00, 0.00, 0.00, 0.00
+total_distance, total_2009, total_2010, total_2011, total_2012 = 0.00, 0.00, 0.00, 0.00, 0.00
+total_rides, total_rides_2009, total_rides_2010, total_rides_2011, total_rides_2012 = 0, 0, 0, 0, 0
+total_hours, total_hours_2009, total_hours_2010, total_hours_2011, total_hours_2012 = 0.00, 0.00, 0.00, 0.00, 0.00
 
 # Variabled used to calculate the number of hours ridden
 calc_hours, calc_minutes, calc_seconds, calc_miliseconds = 0, 0, 0, 0
@@ -18,10 +18,10 @@ calc_hours, calc_minutes, calc_seconds, calc_miliseconds = 0, 0, 0, 0
 training_effect, training_effect_2009, training_effect_2010, training_effect_2011 = 0.0, 0.0, 0.0, 0.0
 
 # Variables for average heart rate and peak heart rate.
-avg_hr, peak_hr, avg_hr_2009, peak_hr_2009, avg_hr_2010, peak_hr_2010, avg_hr_2011, peak_hr_2011 = 0, 0, 0, 0, 0, 0, 0, 0
+avg_hr, peak_hr, avg_hr_2009, peak_hr_2009, avg_hr_2010, peak_hr_2010, avg_hr_2011, peak_hr_2011, avg_hr_2012, peak_hr_2012 = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 # Variables for energy expenditures
-total_energy, energy_2009, energy_2010, energy_2011 = 0, 0, 0, 0
+total_energy, energy_2009, energy_2010, energy_2011, energy_2012 = 0, 0, 0, 0, 0
 
 # Variables for max heart rate, energy distance and min distance
 max_hr, max_energy, max_distance, min_distance = 0, 0, 0.0, 10000.0
@@ -130,6 +130,13 @@ Dir.glob(DIRECTORY + "/*.xml") do |file|
       avg_hr_2011 += ahr
       peak_hr_2011 += phr
       energy_2011 += energy
+    when "2012"
+      total_hours_2012 += (miliseconds / 10.0 / 60.0 / 60.0) + (seconds / 60.0 / 60.0) + (minutes / 60.0) + hours.to_f
+      total_2012 += d
+      total_rides_2012 += 1
+      avg_hr_2012 += ahr
+      peak_hr_2012 += phr
+      energy_2012 += energy
     else
       puts "<p>Add case for #{year}</p>"
     end # end of case
@@ -177,6 +184,18 @@ printf("Average Speed   : %2.1f km/h  \n", total_2011 / total_hours_2011)
 printf("Average Energy  : %d kcal  \n", energy_2011 / total_rides_2011)
 printf("Average HR      : %d  \n", avg_hr_2011 / total_rides_2011)
 printf("Average Peak HR : %d  \n\n", peak_hr_2011 / total_rides_2011)
+printf("2012\n")
+printf("----\n\n")
+printf("Number of rides : %d  \n", total_rides_2012)
+printf("Distance        : %4.2f km  \n", total_2012)
+printf("Time            : %d hours  \n", total_hours_2012.round)
+printf("Energy          : %d kcal  \n", energy_2012)
+printf("Average Distance: %3.2f km  \n", total_2012 / total_rides_2012)
+printf("Average Time    : %2.1f hours  \n", total_hours_2012 / total_rides_2012)
+printf("Average Speed   : %2.1f km/h  \n", total_2012 / total_hours_2012)
+printf("Average Energy  : %d kcal  \n", energy_2012 / total_rides_2012)
+printf("Average HR      : %d  \n", avg_hr_2012 / total_rides_2012)
+printf("Average Peak HR : %d  \n\n", peak_hr_2012 / total_rides_2012)
 printf("Total\n")
 printf("----\n\n")
 printf("Number of rides : %d  \n", total_rides)
