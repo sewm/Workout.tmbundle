@@ -5,8 +5,8 @@ include REXML
 
 DIRECTORY = "/Users/sam/Documents/Fitness/Workouts"
 
-total_distance, total_2009, total_2010, total_2011 = 0.00, 0.00, 0.00, 0.00
-total_rides, total_rides_2009, total_rides_2010, total_rides_2011 = 0, 0, 0, 0
+total_distance, total_2009, total_2010, total_2011, total_2012 = 0.00, 0.00, 0.00, 0.00, 0.00
+total_rides, total_rides_2009, total_rides_2010, total_rides_2011, total_rides_2012 = 0, 0, 0, 0, 0
 
 Dir.glob(DIRECTORY + "/*.xml") do |file|
   year = file.match(/20\d\d/).to_s
@@ -30,6 +30,9 @@ Dir.glob(DIRECTORY + "/*.xml") do |file|
     when "2011"
       total_2011 += d
       total_rides_2011 += 1
+    when "2012"
+      total_2012 += d
+      total_rides_2012 += 1
     else
       puts "<p>Add case for #{year}</p>"
     end
@@ -41,3 +44,4 @@ puts "<p>Total Distance: #{total_distance} km in #{total_rides} rides.</p>"
 puts "<p>Total Distance for 2009: #{total_2009} km in #{total_rides_2009} rides.</p>"
 puts "<p>Total Distance for 2010: #{total_2010} km in #{total_rides_2010} rides.</p>"
 puts "<p>Total Distance for 2011: #{total_2011} km in #{total_rides_2011} rides.</p>"
+puts "<p>Total Distance for 2012: #{total_2012} km in #{total_rides_2012} rides.</p>"
