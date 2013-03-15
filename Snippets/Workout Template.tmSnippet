@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>&lt;?xml version="1.0" ?&gt;
+&lt;workout&gt;
+  &lt;date&gt;$1&lt;/date&gt;
+  &lt;time&gt;$2:$3&lt;/time&gt;
+  &lt;training_effect&gt;$4.$5&lt;/training_effect&gt;
+  &lt;average_heart_rate&gt;$6&lt;/average_heart_rate&gt;
+  &lt;peak_heart_rate&gt;$7&lt;/peak_heart_rate&gt;
+  &lt;energy&gt;$8&lt;/energy&gt;
+  $9
+&lt;/workout&gt;</string>
+	<key>keyEquivalent</key>
+	<string>@W</string>
+	<key>name</key>
+	<string>Workout Template</string>
+	<key>scope</key>
+	<string>text.xml</string>
+	<key>tabTrigger</key>
+	<string>wt</string>
+	<key>uuid</key>
+	<string>05D792D4-D9E6-4457-A3DC-2962B31B9C32</string>
+</dict>
+</plist>
